@@ -1,5 +1,22 @@
-<h2>Welcome to Our Website</h2>
-<div *ngFor="let item of homeData">
-  <h3>{{ item.title }}</h3>
-  <p>{{ item.description }}</p>
+<h2>Welcome to Angular Application</h2>
+<div *ngIf="homeData.length > 0; else noData"> <!-- Structural directive to conditionally display content -->
+  <div *ngFor="let item of homeData">
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.description }}</p>
+  </div>
 </div>
+
+<ng-template #noData> <!-- Else content if homeData is empty -->
+  <p>No home data available.</p>
+</ng-template>
+<input [(ngModel)]="featuredService.name" placeholder="Enter service name"> <!-- Two-way binding -->
+<p>{{ featuredService.name }}</p>
+<h2>Fetched Data from API</h2>
+<ul>
+  <li *ngFor="let post of apiData">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body }}</p>
+  </li>
+</ul>
+
+
