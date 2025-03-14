@@ -8,10 +8,14 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
   homeData: any[] = [];
-
+  apiData: any;
+  featuredService = { name: '', description: '' }; // Define a featured service object
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.homeData = this.dataService.getHomeData();
+    this.dataService.getApiData().subscribe(data => {
+      this.apiData = data;
+    });
   }
 }

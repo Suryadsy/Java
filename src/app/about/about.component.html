@@ -1,6 +1,9 @@
-<h2>About Us</h2>
-<p><strong>Company:</strong> {{ aboutInfo.companyName }}</p>
-<p><strong>Founded:</strong> {{ aboutInfo.founded }}</p>
-<p><strong>Mission:</strong> {{ aboutInfo.mission }}</p>
-<p><strong>Vision:</strong> {{ aboutInfo.vision }}</p>
-<p><strong>Team Size:</strong> {{ aboutInfo.teamSize }}</p>
+<h2>Welcome to {{ aboutInfo.companyName }}</h2>
+<p>{{ aboutInfo.mission }}</p>
+<div [ngClass]="{ 'highlight': aboutInfo.founded < 2025, 'new-company': aboutInfo.founded >= 2025 }">
+  <p><strong>Company:</strong> {{ aboutInfo.companyName }}</p>
+  <p><strong>Founded:</strong> {{ aboutInfo.founded }}</p>
+  <p><strong>Mission:</strong> {{ aboutInfo.mission }}</p>
+  <p><strong>Vision:</strong> {{ aboutInfo.vision }}</p>
+  <p><strong>Team Size:</strong> {{ aboutInfo.teamSize }}</p>
+</div>
