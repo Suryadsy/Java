@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "name": "A B",
+      "email": "a.b@example.com",
+      "phone": "123-456-7890",
+      "profileImage": "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "C D",
+      "email": "c.d@example.com",
+      "phone": "098-765-4321",
+      "profileImage": "https://randomuser.me/api/portraits/women/1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "E F",
+        "email": "e.f@example.com",
+        "phone": "098-765-4321",
+        "profileImage": "https://randomuser.me/api/portraits/women/1.jpg"
+    },
+    {
+        "id": 4,
+        "name": "G H",
+        "email": "g.h@example.com",
+        "phone": "098-765-4321",
+        "profileImage": "https://randomuser.me/api/portraits/women/1.jpg"
+    },
+    {
+        "id": 5,
+        "name": "I J",
+        "email": "i.j@example.com",
+        "phone": "098-765-4321",
+        "profileImage": "https://randomuser.me/api/portraits/women/1.jpg"
+    }
+  ]
