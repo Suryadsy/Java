@@ -18,5 +18,36 @@
     <p>{{ post.body }}</p>
   </li>
 </ul>
+<h2>Employee List</h2>
+
+<!-- Show loading message while data is being fetched -->
+<div *ngIf="loading">Loading employees...</div>
+
+<!-- Show error message if there's a problem fetching the data -->
+<div *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</div>
+
+<!-- Employee table - Only display when employees are fetched and there's no error -->
+<table *ngIf="!loading && !errorMessage">
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees" (click)="openEmployeeDetails(employee)">
+      <td><img [src]="employee.profileImage" alt="Profile" width="50" height="50"></td> <!-- Property binding for profile image -->
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.phone }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Show message if no employees are available -->
+<div *ngIf="!loading && employees.length === 0">No employees available.</div>
+
 
 
